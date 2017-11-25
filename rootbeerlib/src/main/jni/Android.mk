@@ -25,5 +25,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := tool-checker
 LOCAL_SRC_FILES := toolChecker.cpp
 LOCAL_LDLIBS := -llog
-
+LOCAL_CFLAGS := -fstack-protector -fstack-protector-all
+LOCAL_CPPFLAGS := -fstack-protector -fstack-protector-all
+LOCAL_LDFLAGS += -fstack-protector -fstack-protector-all
 include $(BUILD_SHARED_LIBRARY)
